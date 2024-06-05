@@ -1,0 +1,13 @@
+{
+  "name": "word-counter",
+  "version": "1.0.0",
+  "description": "Make a word counter using Typescript",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
