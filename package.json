@@ -1,5 +1,5 @@
 {
-  "name": "word-counter",
+  "name": "bak_word-counter",
   "version": "1.0.0",
   "description": "Make a word counter using Typescript",
   "main": "index.js",
@@ -9,5 +9,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7"
+  }
 }

@@ -1,30 +1,56 @@
-function countWords(text: string): { [word: string]: number}{
-    //Convert the text to lowercase to ensure case-insensitive counting
-    const lowerCaseText = text.toLocaleLowerCase();
+#! /usr/bin/env node
+import inquirer from "inquirer";
+import chalk from "chalk"
 
-    //Use a regular expression to splits the text into words
-    const word = lowerCaseText.match(/\b\w+\b/g);
+console.log(chalk.bgCyanBright("\n                                    "));
+console.log(chalk.bgCyanBright("         " + chalk.bgBlue.bold(" WORDS ") + "  " + chalk.bgBlue.bold(" COUNTER ") + "         "));
+console.log(chalk.bgCyanBright("                                    \n"));
+console.log(chalk.bgCyanBright("   " + chalk.bgBlue.bold(" We Will Count the Words of your Given Text ") + "   "));
 
-    //Initialize an empty object to store word counts
-    const wordCounts: { [word: string]: number} = {};
-    
-    //Iterate over each word in the words array
-    if (word){
-        word.forEach(word => {
-            if(wordCounts[word]){
-                wordCounts[word]++;
+let condition: boolean = true;
+
+while (condition) {
+
+    const answer: {
+        Scentence: string
+    } = await inquirer.prompt(
+        [
+            {
+                name: "Scentence",
+                message: chalk.bgCyan.bold("\nEnter the text for countig the words: "),
+                type: "input"
             }
-            else{
-                wordCounts[word] = 1;
-            }
-        });
-    }
+        ]
+    );
 
-    //Return the object containing word counts
-    return wordCounts;
+    const words = answer.Scentence.trim().split(" ");
+
+    // Print the array of words to the console
+    console.log("\n");
+    console.log(words);
+
+    // Print the words without showing in the array
+    console.log(chalk.bgCyan.bold("\nYour Words: ") + chalk.bgBlue.bold(words));
+
+    // Print the words count of the text to the console
+    console.log(chalk.bgCyan.bold("\nTotal Words in your Given Text is:"), chalk.bgBlue.bold(" " + words.length + " "));
+
+    // Asking for more use
+    const forMore = await inquirer.prompt(
+        [
+            {
+                name: "wantMore",
+                message: chalk.bgBlue.bold("\nAre you want to Count more Words?"),
+                type: "confirm",
+                default: true
+            }
+        ]
+    );
+    condition = forMore.wantMore;
 
 }
 
-const text = "Hello World! Hello Typescript";
-const wordCounts = countWords(text);
-console.log(wordCounts);
+// Print the Thanks when condition is 
+console.log(chalk.bgCyanBright("\n                                 "));
+console.log(chalk.bgCyanBright("       " + chalk.bgBlue.bold(" Thanks For Using My Word Counter") + "        "));
+console.log(chalk.bgCyanBright("                                 "));
