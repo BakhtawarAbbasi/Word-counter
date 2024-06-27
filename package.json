@@ -11,6 +11,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "bak_word-counter": "^1.0.0",
     "inquirer": "^8.0.0"
   },
   "devDependencies": {
