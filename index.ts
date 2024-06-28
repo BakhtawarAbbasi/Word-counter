@@ -3,7 +3,7 @@ import inquirer from "inquirer";
 import chalk from "chalk"
 
 console.log(chalk.bgCyanBright("\n                                    "));
-console.log(chalk.bgCyanBright("         " + chalk.bgBlue.bold(" WORDS ") + "  " + chalk.bgBlue.bold(" COUNTER ") + "         "));
+console.log(chalk.bgCyanBright("         " + chalk.bgMagentaBright.bold(" WORDS ") + "  " + chalk.bgMagentaBright.bold(" COUNTER ") + "         "));
 console.log(chalk.bgCyanBright("                                    \n"));
 console.log(chalk.bgCyanBright("   " + chalk.bgBlue.bold(" We Will Count the Words of your Given Text ") + "   "));
 
@@ -51,6 +51,6 @@ while (condition) {
 }
 
 // Print the Thanks when condition is 
-console.log(chalk.bgCyanBright("\n                                 "));
-console.log(chalk.bgCyanBright("       " + chalk.bgBlue.bold(" Thanks For Using My Word Counter") + "        "));
-console.log(chalk.bgCyanBright("                                 "));
+console.log(chalk.bgCyanBright("\n                                                               "));
+console.log(chalk.bgCyanBright("       " + chalk.bgBlue.bold(" Thanks For Using My Word Counter") + "                "));
+console.log(chalk.bgCyanBright("                                                                "));
