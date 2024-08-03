@@ -9,12 +9,12 @@ let condition = true;
 while (condition) {
     const answer = await inquirer.prompt([
         {
-            name: "Scentence",
+            name: "Sentance",
             message: chalk.bgCyan.bold("\nEnter the text for countig the words: "),
             type: "input"
         }
     ]);
-    const words = answer.Scentence.trim().split(" ");
+    const words = answer.Sentance.trim().split(" ");
     // Print the array of words to the console
     console.log("\n");
     console.log(words);
